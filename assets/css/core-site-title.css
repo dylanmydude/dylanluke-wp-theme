@@ -1,0 +1,19 @@
+:root {
+    --primary-color: #0073aa;
+    --secondary-color: #005177;
+    --font-family-base: 'Victor Mono', monospace;
+    --font-size-base: 16px;
+}
+
+body {
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-base);
+    color: var(--primary-color);
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
