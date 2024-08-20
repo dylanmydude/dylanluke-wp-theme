@@ -57,24 +57,36 @@
     </div>
 </section>
 
+<!-- Spacer Section -->
+<section class="spacer" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/hero-image.jpg');"></section>
 
 <!-- Contact Section -->
 <section class="contact">
-    <h2>Contact Us</h2>
-    <p>We would love to hear from you! Reach out to us for bookings and inquiries.</p>
-    <form action="#" method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+    <div class="contact-content">
+        <!-- Image -->
+        <div class="contact-image">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/hero-image.jpg" alt="Contact Image">
+        </div>
         
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
-        
-        <input type="submit" value="Send">
-    </form>
+        <!-- Contact Information -->
+        <div class="contact-info">
+            <p><a class="contact-link" href="mailto:dylanlukephotography@gmail.com">dylanlukephotography@gmail.com</a></p>
+            <p><a class="contact-link" href="tel:+27744226932">074 422 6932</a></p>
+            <div class="social-media">
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
 </section>
+
+
+
+
+
+
+
+
 
 </main>
 

@@ -240,15 +240,97 @@ h3 {
 
 .service-item img {
     width: 100%;
-    max-width: 360px; 
+    /* max-width: 360px;  */
     height: auto;
     border-radius: 10px;
     margin-bottom: 10px;
 }
 
+
+
 .contact {
-    background-color: #1a696e;
+    height: 85vh; /* Adjusted viewport height */
+    display: flex;
+    align-items: center;
 }
+
+.contact-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; /* Ensures content takes up full width */
+}
+
+.contact-image {
+    flex: 1; /* Ensures the image takes up half the screen */
+    display: flex;
+    justify-content: center; /* Centers the image horizontally */
+    padding: 20px; /* Small padding around the image */
+}
+
+.contact-image img {
+    width: 100%; /* Image takes up the full width of its container */
+    height: auto;
+    border-radius: 10px;
+}
+
+.contact-info {
+    flex: 1; /* Ensures the text takes up half the screen */
+    text-align: center;
+    padding: 0 20px; /* Padding only on left and right for the text */
+}
+
+.contact-info .contact-link {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.contact-info .contact-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #0d4d52;
+    z-index: -1;
+    transition: width 0.3s ease;
+}
+
+.contact-info .contact-link:hover::before {
+    width: 100%;
+}
+
+.contact-info .contact-link:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.social-media {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.social-media a {
+    margin: 0 10px;
+    font-size: 2.5rem;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #0d4d52;
+}
+
+
+
+
+
 
 /* Section Styles */
 section {

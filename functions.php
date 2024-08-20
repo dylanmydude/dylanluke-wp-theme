@@ -42,3 +42,8 @@ function enqueue_custom_scroll_script() {
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_scroll_script');
 
+function mytheme_enqueue_styles() {
+    wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+}
+add_action('wp_enqueue_scripts', 'mytheme_enqueue_styles');
+
