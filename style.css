@@ -23,6 +23,7 @@ body, html {
     padding: 0;
     height: 100%;
     box-sizing: border-box; 
+    scroll-behavior: smooth; 
 }
 
 /* .site {
@@ -132,6 +133,11 @@ nav ul li a:hover {
     overflow: hidden;
 }
 
+.hero-content a {
+    display: inline-block; /* Makes the anchor tag respect margin auto */
+    text-align: center;
+}
+
 .hero-content {
     position: relative;
     z-index: 2;
@@ -141,16 +147,17 @@ nav ul li a:hover {
 }
 
 .hero-button {
-    background-color: #ffffff; 
-    color: #121212; 
+    background-color: #ffffff;
+    color: #121212;
     font-family: Helvetica, sans-serif;
-    /* font-weight: 100 !important; */
     font-size: 1.7rem;
-    border: none; 
+    border: none;
     border-radius: 30px;
     padding: 3px 30px;
-    cursor: pointer; 
+    cursor: pointer;
     transition: background-color 0.3s ease;
+    display: inline-block; /* Ensure the button stays inline */
+    margin: 0 auto; /* Center the button within the anchor */
 }
 
 .services-button {
@@ -361,18 +368,86 @@ footer {
 }
 
 .fade-in {
-    animation: fadeIn 2s ease-in-out;
-}
-
-/* Initially hide elements */
-.fade-in-on-scroll {
     opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
+    transition: opacity 2s ease-in-out;
 }
 
-/* Make elements visible when in view */
-.fade-in-on-scroll.visible {
+.fade-in.visible {
     opacity: 1;
-    transform: translateY(0);
+}
+
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+}
+
+.slide-in-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+}
+
+.slide-in-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+body {
+    cursor: none;
+  }
+
+  body, a, button, input, .cursor-pointer {
+    cursor: none !important;
+  }
+  
+  #circle {
+    position: fixed;
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    border-radius: 100%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: transform 150ms ease;
+    z-index: 9999;
+    mix-blend-mode: difference;
+    will-change: transform;
+  }
+  
+  #circle.bigger {
+    width: 36px;
+    height: 36px;
+  }
+  
+  #scroller-container {
+    will-change: transform;
 }
