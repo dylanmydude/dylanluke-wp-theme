@@ -1,2 +1,2 @@
-minimal wordpress theme for my photography site
+single page wordpress theme for photography site
 dylanluke.com
